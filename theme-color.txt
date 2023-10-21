@@ -1,0 +1,11 @@
+Mirage
+#1A262D
+
+Copper
+#BC7138
+
+Pale Sky
+#67767F
+
+Slate Gray
+#78878F
