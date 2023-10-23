@@ -1,32 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 
 
-body {
-    font-family: 'Alegreya Sans SC','Dosis' , sans-serif;
-    color:white;
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+:root{
+    --orange : #BC7138;
+    --black  : #1A262D;
+    --white  : white;
+    --grey   : #78878F;
+}
 
+*{
+    font-family: 'Alegreya Sans SC','Dosis' , sans-serif;
+    font-size: 1rem;
+    color: var(--white);
+
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .container{
-    display: flex;
+    height: 100vh;
+}
 
+.container , .left > div{
+    display: flex;
+    flex-flow: row;
+}
+
+/* left */
+
+.left{
+    background-image: url(tom-barrett-hgGplX3PFBg-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+
+    width: 35vw;
+    height: 100vh;
+}
+
+.left > div{
+    background-color: #67767f6c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20vh;
+    padding: 5px 0;
+}
+
+.left > div > img{
+    width: 10vh;
+}
+
+.left > div > p{
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 
-.right{
-    background-color: #1A262D;
+/* right */
 
-    width: 55%;
+.right{
+    background-color: var(--black);
+
+    width: 65vw;
     padding: 3rem;
 }
 
 .right > h1{
     margin-bottom: 2rem;
 
-    font-weight: ;
+    font-size: 1.5rem;
+    font-weight: 400;
 
 }
 
@@ -37,16 +83,19 @@ form{
 
 ul{
     display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
     justify-content: start;
     margin-bottom: 0.75rem;
     
 
     font-size: 1rem;
     font-weight:100;
+    list-style: none;
 }
 
 li{
-    margin-right: 5rem;
+    width: 40%;
 }
 
 li > label{
@@ -58,31 +107,30 @@ li > label{
 li > input{
     appearance: none;
     outline: none;
-    border: 1.5px solid #78878F;
+    border: 1.5px solid var(--grey);
     border-radius: 5px;
-    background: none;
+    background: var(--black);
 
     color: white;
     font: inherit;
 
+    width: 100%;
     padding: 0.2rem;
-    padding-right: 7rem;
 }
 
 li > input:focus{
-    border-color: #BC7138;
+    border-color: var(--orange);
 }
 
 form > button{
     background: none;
     padding: 0.4rem 4rem;
-    border: 2px solid #BC7138;
+    border: 2px solid var(--orange);
     border-radius: 7px;
 
-    color: #BC7138;
+    color: var(--orange);
     font-size: 1.5rem;
     font-weight: 800;
-    font-family: inherit;
     
 
     margin-top: 3rem;
@@ -91,8 +139,8 @@ form > button{
 }
 
 form > button:hover{
-    color: #1A262D;
-    background-color: #BC7138;
+    color: var(--black);
+    background-color: var(--orange);
 
 }
 
@@ -105,7 +153,7 @@ form > p{
 }
 
 form > p > a {
-    color: #BC7138;
+    color: var(--orange);
     font-weight: 800;
     text-decoration: none;
 
@@ -117,31 +165,3 @@ form > p > a:hover{
     text-decoration: underline;
 }
 
-.left{
-    background-image: url(tom-barrett-hgGplX3PFBg-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
-
-    width: 45%;
-    height: 100vh;
-}
-
-.left > div{
-    background-color: #67767f6c;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25%;
-}
-
-.left > div > img{
-    width: 15%;
-    margin: 1rem;
-}
-
-.left > div > p{
-    font-size: 2rem;
-    font-weight: 700;
-
-}

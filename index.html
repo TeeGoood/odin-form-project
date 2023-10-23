@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>register form</title>
-    <link rel="stylesheet" href="reset-default.css">
+    <!-- <link rel="stylesheet" href="reset-default.css"> -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
         <div class="right">
             <h1>
                 This is not a real online service! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, commodi! <br>
-                <span>Sign up now to get started.</span>
+                Sign up now to get started.
             </h1>
             <h1>You know you want to.</h1>
             <form action="">
@@ -43,10 +43,10 @@
                 <ul>
                     <li>
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password" required></li>
+                        <input type="password" id="password" name="password" required minlength="8"></li>
                     <li>
                         <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm-password" name="confirm-password" required></li>
+                        <input type="password" id="confirm-password" name="confirm-password" required minlength="8"></li>
                 </ul>
                 <button>create account</button>
                 <p>already have an account?<a href="">LOG IN</a></p>

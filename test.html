@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-areas: 'one one one' , 'two three three' ;
+        }
+
+        .container > div{
+            background-color: lightpink;
+            border: 5px solid lightblue;
+            width: 50px;
+            height: 50px;
+        }
+
+        .child1{
+            grid-area: "one";
+        }
+        
+        .child2{
+            grid-area: "two";
+        
+        }
+
+        .child3{
+            grid-area: "three";
+        
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+    </div>
+</body>
+</html>
